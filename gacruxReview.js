@@ -1,13 +1,13 @@
 console.log( 'js' );
 
-var records = 123;
+var records = [];
 var truthieOrFalsie = true;
 
-function addToCollection( number ){
-  console.log( 'in addToCollection:', number );
+function addToCollection( recordName ){
+  console.log( 'in addToCollection:', recordName );
   // add number to records if it is of type number
-  if( typeof( number ) === 'number' ){
-    records += number;
+  if( typeof( recordName ) === 'string' ){
+    records.push( recordName );
     return true;
   } //end is number
   else{
