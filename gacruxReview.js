@@ -25,11 +25,15 @@ function addRecord(){
   } //end !OK
 } // end addRecord
 
-function isTruthie(){
-  if( truthieOrFalsie ){
+function isTruthie( something ){
+  if( something ){
     return true;
   } // truthy
   else{
     return false;
   } // end falsie
 } // isTruthie
+
+function gimmeBread(){
+  return 3 * 'asdf';
+}
