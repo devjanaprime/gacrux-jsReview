@@ -1,14 +1,35 @@
 console.log( 'js' );
 
 var records = 123;
+var truthieOrFalsie = true;
 
-function aboutTheCollection(){
-  console.log( 'in aboutTheCollection', records );
-  return records;
-} // end aboutTheCollection
+function addToCollection( number ){
+  console.log( 'in addToCollection:', number );
+  // add number to records if it is of type number
+  if( typeof( number ) === 'number' ){
+    records += number;
+    return true;
+  } //end is number
+  else{
+    return false;
+  } // end !is number
+} // addToCollection
 
-function addARecord(){
-  console.log( 'in addARecord');
-  records++;
-  return true;
-} // addARecord
+// to illustrate the value of returning a boolean from a function:
+function addRecord(){
+  if( addToCollection( 1 ) ){
+    console.log( 'record added:', records );
+  } // end OK
+  else{
+    console.log( 'nope.');
+  } //end !OK
+} // end addRecord
+
+function isTruthie(){
+  if( truthieOrFalsie ){
+    return true;
+  } // truthy
+  else{
+    return false;
+  } // end falsie
+} // isTruthie
