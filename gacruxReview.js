@@ -67,6 +67,11 @@ function findRecord( recordToFind ){
   return objectToReturn;
 } // findRecord
 
+function sameYear( inputRecord ){
+  // use findByYear to search for all reecords from this year
+  console.log( findByYear( inputRecord.year ) );
+} // end sameYear
+
 function findByYear( year ){
   console.log( 'in findByYear:', year );
   var arrayToReturn = [];
