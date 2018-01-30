@@ -42,3 +42,44 @@ function addToCollection( newRecord ){
     return false;
   } // end !is number
 } // addToCollection
+
+function findByArtist( artistName ){
+  console.log( 'in findByArtist:', artistName );
+  // array of records by given artist, if/when found
+  var arrayToReturn = [];
+  // loop through array and check if artist matches
+  for( var i=0; i<records.length; i++ ){
+    if( records[ i ].artist === artistName ){
+      // match found, push this record into array to return
+      arrayToReturn.push( records[ i ] );
+    } // end match found
+  } // end for
+  return arrayToReturn;
+} // end findByArtist
+
+function findRecord( recordToFind ){
+  console.log( 'in findRecord:', recordToFind );
+  console.log( records.indexOf( recordToFind ) );
+  var objectToReturn = {
+    index: records.indexOf( recordToFind ),
+    record: records[ records.indexOf( recordToFind ) ]
+  } // end objectToReturn
+  return objectToReturn;
+} // findRecord
+
+function findByYear( year ){
+  console.log( 'in findByYear:', year );
+  var arrayToReturn = [];
+  for( var i=0; i<records.length; i++ ){
+    // if records[ i ].year matches year given then MATCH!
+    if( records[ i ].year === year ){
+      arrayToReturn.push( records[ i ] );
+    } // end match
+  } // end for
+  return arrayToReturn;
+} // findByYear
+
+/// temp setup for testing - ///
+addToCollection( prototypeRecord );
+addToCollection( test1 );
+addToCollection( test2 );
